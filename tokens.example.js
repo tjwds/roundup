@@ -1,6 +1,6 @@
 const tokens = {
-    user: 'username',
-    password: '1234',
+    // THIS IS NOT YOUR NORMAL PASSWORD! https://pinboard.in/settings/password
+    apiPhrase: 'username:apiToken',
     tagName: 'roundup',
 }
 

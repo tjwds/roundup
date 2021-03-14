@@ -4,7 +4,7 @@ const { tokens } = require('./tokens');
 const weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7)
 
-fetch(`https://api.pinboard.in/v1/posts/recent?auth_token=${tokens.user}:${tokens.password}&format=json&tag=${tokens.tagName}`)
+fetch(`https://api.pinboard.in/v1/posts/recent?auth_token=${tokens.apiPhrase}&format=json&tag=${tokens.tagName}`)
     .then(res => res.json())
     .then(res => {
         res.posts.forEach(post => {
