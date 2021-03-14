@@ -12,7 +12,7 @@ fetch(`https://api.pinboard.in/v1/posts/recent?auth_token=${tokens.apiPhrase}&fo
                 const tags = post.tags.split(' ').filter(x => x !== tokens.tagName).join(', ')
                 console.log(`[${post.description}](${post.href})  `)
                 if (post.extended) {
-                    console.log(post.extended);
+                    console.log(post.extended + '  ');
                 }
                 if (tags) {
                     console.log(`Filed under: ${tags}`);
