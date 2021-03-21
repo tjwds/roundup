@@ -16,7 +16,7 @@ date=${year}-${month}-${date}
 fetch(`https://api.pinboard.in/v1/posts/recent?auth_token=${tokens.apiPhrase}&format=json&tag=${tokens.tagName}`)
     .then(res => res.json())
     .then(res => {
-        res.posts.forEach(post => {
+        res.posts.reverse().forEach(post => {
             if (new Date(post.time) > weekAgo) {
                 const tags = post.tags.split(' ').filter(x => x !== tokens.tagName).join(', ')
                 console.log(`[${post.description}](${post.href})  `)
