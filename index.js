@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const { tokens } = require('./tokens');
 
 const weekAgo = new Date();
-weekAgo.setDate(weekAgo.getDate() - 7)
+weekAgo.setDate(weekAgo.getDate() - 8)
 
 fetch(`https://api.pinboard.in/v1/posts/recent?auth_token=${tokens.apiPhrase}&format=json&tag=${tokens.tagName}`)
     .then(res => res.json())
